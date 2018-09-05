@@ -1,0 +1,8 @@
+<aspectj>
+    <aspects>
+        <aspect name="spike.HelloAspect"/>
+        <weaver options="-verbose -showWeaveInfo">
+            <include within="spike.*"/>
+        </weaver>
+    </aspects>
+</aspectj>

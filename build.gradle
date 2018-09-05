@@ -1,0 +1,33 @@
+group 'com.javing.customAnnotations'
+version '1.0-SNAPSHOT'
+
+project.ext {
+    aspectjVersion = '1.8.4'
+}
+
+apply plugin: 'java'
+apply plugin: 'aspectj.gradle'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.aspectj:gradle-aspectj:0.1.6"
+    }
+}
+
+dependencies {
+    compile 'org.aspectj:aspectjrt:1.8.4'
+    compile 'org.aspectj:aspectjweaver:1.8.4'
+    compile 'org.aspectj:aspectjtools:1.8.4'
+    compile 'junit:junit:4.12'
+}
